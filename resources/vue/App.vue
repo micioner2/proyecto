@@ -12,7 +12,7 @@
 
         <section class="content">
           <div class="container-fluid">
-            <ExampleForm></ExampleForm>
+            <router-view />
           </div>
         </section>
         
