@@ -29,9 +29,11 @@
 import $ from 'jquery'
 import "../../node_modules/admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"
 import "../../node_modules/admin-lte/plugins/select2/css/select2.min.css"
+import 'datatables.net-responsive-bs4'
+// import 'datatables.net-responsive-bs'
+// import 'datatables.net-bs4'
 import Preloader from "./dashboard/Preloader.vue"
 import ContentHeader from "./dashboard/ContentHeader.vue"
-import ExampleForm from "./components/ExampleForm.vue"
 import Navbar from "./dashboard/Navbar.vue";
 import Sidebar from "./dashboard/Sidebar.vue";
 import Footer from "./dashboard/Footer.vue";
@@ -41,12 +43,12 @@ export default {
   components: {
     Preloader,
     ContentHeader,
-    ExampleForm,
     Navbar,
     Sidebar,
     Footer,
     ControlSidebar
   },
+
   methods: {
     initializeSelect2() {
       //Initialize Select2 Elements
@@ -56,10 +58,20 @@ export default {
         theme: "bootstrap4",
       });
     },
+    
+    dataTable(){
+      $(document).ready(function() {
+          $('#example').DataTable();
+      } );
+    }
+
   },
+
+
   mounted() {
     this.initializeSelect2()
-  }
+  },
+
 };
 </script>
 

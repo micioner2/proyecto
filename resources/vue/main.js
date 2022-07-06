@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import myMixin from './myMixin.js'
 window.$ = window.jQuery = require("jquery");
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -48,10 +49,16 @@ import "../../node_modules/admin-lte/plugins/bs-stepper/css/bs-stepper.min.css"
 import "../../node_modules/admin-lte/plugins/dropzone/min/dropzone.min.css"
 
 
+
 library.add(fas, fab, far, faLock, faEnvelope, faFacebook, faGooglePlus);
 dom.watch()
 
-createApp(App)
+createApp(
+    {
+        extends: App,
+        mixins: [myMixin],
+    }
+)
 .component("font-awesome-icon", FontAwesomeIcon)
 .use(router)
 .mount('#app')
