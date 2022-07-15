@@ -39,6 +39,7 @@ import Sidebar from "./dashboard/Sidebar.vue";
 import Footer from "./dashboard/Footer.vue";
 import ControlSidebar from "./dashboard/ControlSidebar.vue"
 export default {
+
   name: "App",
   components: {
     Preloader,
@@ -49,6 +50,7 @@ export default {
     ControlSidebar
   },
 
+
   methods: {
     initializeSelect2() {
       //Initialize Select2 Elements
@@ -57,12 +59,6 @@ export default {
       $(".select2bs4").select2({
         theme: "bootstrap4",
       });
-    },
-    
-    dataTable(){
-      $(document).ready(function() {
-          $('#example').DataTable();
-      } );
     }
 
   },
@@ -71,6 +67,7 @@ export default {
   mounted() {
     this.initializeSelect2()
   },
+  
 
 };
 </script>

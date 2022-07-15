@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import myMixin from './myMixin.js'
 window.$ = window.jQuery = require("jquery");
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -55,8 +54,8 @@ dom.watch()
 
 createApp(
     {
-        extends: App,
-        mixins: [myMixin],
+        // mixins: [myMixin],
+        extends: App
     }
 )
 .component("font-awesome-icon", FontAwesomeIcon)

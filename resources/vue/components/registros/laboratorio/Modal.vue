@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" @click="hello">Save changes</button>
+                    <button type="button" class="btn btn-primary" @click="mensaje">Save changes</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -54,7 +54,23 @@
 </template>
 
 <script>
+
 export default {
 
+    props:{
+        myRoute:{
+            type: String,
+            Required: true
+        },
+    },
+
+    setup(props){
+        const mensaje = () =>{
+            console.log(props.myRoute);
+        }
+        return {
+            mensaje
+        }
+    }
 }
 </script>
