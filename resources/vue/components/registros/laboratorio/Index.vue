@@ -694,9 +694,11 @@
    
         setup(props){
             const abrirModal = () => {
-                $('#modal-example').modal('show');
-                console.log(props.ruta);
+                // $('#modal-example').modal('show');
+                // console.log(process.env.ROOT_API);
        
+                let api_url = process.env.MIX_API_URL;
+                console.log(api_url);
             }
             
             return{

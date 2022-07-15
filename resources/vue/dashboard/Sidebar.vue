@@ -46,11 +46,6 @@
                                 </router-link>
                             </li>
 
-                            <li class="nav-item">
-                                <router-link class="nav-link " to="asistente" exact>
-                                   <p>Asistentes</p>
-                                </router-link>
-                            </li>
                         </ul>
                     </li>
                 </ul>
