@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('persona','PersonaController@index');
+
+Route::resource('persona', PersonaController::class);
+
+
+// Route::group(['prefix' => 'persona', 'namespace' => 'Controllers'], function () {
+
+
+
+// });
+
+
 
 
 

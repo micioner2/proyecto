@@ -10,7 +10,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import {faLock, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faFacebook, faGooglePlus} from '@fortawesome/free-brands-svg-icons';
 import { router } from './router/index'
-
+import {createPinia} from 'pinia'
 
 //import adminlte scripts
 import "../../node_modules/admin-lte/dist/js/adminlte.min.js"
@@ -60,4 +60,5 @@ createApp(
 )
 .component("font-awesome-icon", FontAwesomeIcon)
 .use(router)
+.use(createPinia())
 .mount('#app')

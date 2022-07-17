@@ -10,7 +10,21 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-6">
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="">Nombre</label>
+                                <input type="text" class="form-control" v-model="data.nombre">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Edad</label>
+                                <input type="text" class="form-control" v-model="(data.edad)">
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Especialidad</label>
                                 <select class="form-control">
@@ -41,7 +55,7 @@
                                 <label for="">Numéro de Laboratorio</label>
                                 <input type="text" class="form-control">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -58,15 +72,15 @@
 export default {
 
     props:{
-        myRoute:{
-            type: String,
+        data:{
+            type: Array,
             Required: true
         },
     },
 
     setup(props){
         const mensaje = () =>{
-            console.log(props.myRoute);
+            console.log(props.data);
         }
         return {
             mensaje

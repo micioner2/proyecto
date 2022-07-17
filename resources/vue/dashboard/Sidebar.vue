@@ -41,8 +41,14 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <router-link class="nav-link " to="laboratorio" exact>
+                                <router-link class="nav-link" to="laboratorio" exact>
                                    <p>Laboratorios</p>
+                                </router-link>
+                            </li>
+
+                            <li class="nav-item">
+                                <router-link class="nav-link" to="prueba" exact>
+                                   <p>Prueba</p>
                                 </router-link>
                             </li>
 
